@@ -1,0 +1,41 @@
+{
+  "name": "sapsan",
+  "version": "1.0.0",
+  "description": "node.js framework",
+  "author": "Oleh Mushka <olegamysk@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redeyeowner/sapsan.git"
+  },
+  "keywords": [
+    "node",
+    "sapsan",
+    "framework",
+    "web",
+    "rest",
+    "restful",
+    "app",
+    "api"
+  ],
+  "files": [
+    "LICENSE",
+    "Readme.md",
+    "index.js",
+    "lib/"
+  ],
+  "bugs": {
+    "url": "https://github.com/redeyeowner/sapsan/issues"
+  },
+  "homepage": "https://github.com/redeyeowner/sapsan#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
