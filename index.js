@@ -6,4 +6,6 @@
 
 'use strict';
 
-module.exports = require('./lib/sapsan');
+module.exports = require('./lib/core');
+module.exports.core = require('./lib/core');
+module.exports.common = require('./lib/common');
