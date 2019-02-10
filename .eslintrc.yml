@@ -8,9 +8,9 @@ rules:
   max-len: [
     error, {
       code: 80,
-      ignoreComments: true,
-      IgnoredPatterns:
-        - '^class'
-        - '^module.exports'
+      ignoreComments: true
     }]
   no-trailing-spaces: error
+  no-mixed-operators: off
+  no-underscore-dangle: off
+  operator-linebreak: off
