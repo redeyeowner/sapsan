@@ -4,9 +4,9 @@ const Configs = require('./config');
 
 async function bootstrap() {
   try {
-    const app = await new Sapsan(new AppController(), new Configs());
-    await app.initConfig(new Configs());
-    await app.initApplication(new AppController());
+    const app = await new Sapsan();
+    await app.initConfig(Configs);
+    await app.initApplication(AppController);
 
     app.start();
   } catch ({ message }) {

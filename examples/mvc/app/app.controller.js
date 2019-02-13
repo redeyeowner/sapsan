@@ -6,10 +6,10 @@ const UserController = require('./user/user.controller');
 module.exports = class AppController extends ApplicationController {
   constructor() {
     super({
-      prefix: '/',
+      prefix: '/api/v1',
       controllers: [
-        new AuthController(),
-        new UserController(),
+        AuthController,
+        UserController,
       ],
     });
     this._name = 'root';
