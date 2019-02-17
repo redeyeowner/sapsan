@@ -1,5 +1,5 @@
 Complex web framework in OOP style for [node](http://nodejs.org).
-For not it is on the stage on development and can't be used for real projects because not all core features are developed for this moment.
+For now it is on the stage on development and can't be used for real projects because not all core features are developed.
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
