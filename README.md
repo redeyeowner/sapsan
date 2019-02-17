@@ -1,8 +1,8 @@
 Complex web framework in OOP style for [node](http://nodejs.org).
 For not it is on the stage on development and can't be used for real projects because not all core features are developed for this moment.
 
-  [![NPM Version]][npm-url]
-  [![NPM Downloads]][downloads-url]
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
 
 ## Installation
 
@@ -43,5 +43,7 @@ Sapsan is an MIT-licensed open source project. It can grow thanks to the sponsor
 
   [MIT](LICENSE)
 
+[npm-image]: https://img.shields.io/npm/v/sapsan.svg
 [npm-url]: https://npmjs.org/package/sapsan
+[downloads-image]: https://img.shields.io/npm/dm/sapsan.svg
 [downloads-url]: https://npmjs.org/package/sapsan
