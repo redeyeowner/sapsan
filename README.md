@@ -1,5 +1,6 @@
 Complex web framework in OOP style for [node](http://nodejs.org).
 For now it is on the stage on development and can't be used for real projects because not all core features are developed.
+**2.0.0 version will be stable version. It is not recommended to use it before.**
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
@@ -27,6 +28,14 @@ $ npm install sapsan
   - validators
   - argument of actions will be instance of `Context` class and `Request` property will be frozen
   - coverage by tests
+
+## Philosophy
+Flow of request is next:
+...validators ->
+...serializers ->
+...middlewares ->
+mainHandler ->
+...exceptionFilters/...deserializers
 
 ## People
 
