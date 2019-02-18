@@ -3,6 +3,8 @@ const {
 } = require('../../../../lib/common');
 const ApplicationController =
   require('../../../../lib/common/injectors/application.controller');
+const { BadRequestException } =
+  require('../../../../lib/common/exceptions/http.exceptions');
 
 module.exports = class UserController extends ApplicationController {
   constructor() {
@@ -38,6 +40,10 @@ module.exports = class UserController extends ApplicationController {
   }
 
   getOne() {
+    const qwe = 1;
+    if (qwe === 1) {
+      throw new BadRequestException('Guarantee error');
+    }
     return {
       method: 'get-one',
       name: this._name,
