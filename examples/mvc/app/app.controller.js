@@ -1,5 +1,4 @@
-const ApplicationController =
-  require('../../../lib/common/injectors/application.controller');
+const { ApplicationController } = require('../../../index');
 const AuthController = require('./auth/auth.controller');
 const UserController = require('./user/user.controller');
 

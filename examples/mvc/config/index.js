@@ -1,4 +1,4 @@
-const { ConfigModule } = require('../../../lib/common');
+const { ConfigModule } = require('../../../index');
 const locales = require('./locales');
 const database = require('./database.config');
 const secret = require('./secret.config');

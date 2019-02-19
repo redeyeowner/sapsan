@@ -1,4 +1,4 @@
-const Sapsan = require('../../index');
+const { Sapsan } = require('../../index');
 const AppController = require('./app/app.controller');
 const Configs = require('./config');
 

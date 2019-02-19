@@ -1,32 +1,23 @@
 const {
-  RequestMethod,
-} = require('../../../../lib/common');
-const ApplicationController =
-  require('../../../../lib/common/injectors/application.controller');
-const { BadRequestException } =
-  require('../../../../lib/common/exceptions/http.exceptions');
+  ApplicationController,
+  RequestMethod: {
+    GET,
+    POST,
+    PATCH,
+    DELETE,
+  },
+  Exceptions: { BadRequestException },
+} = require('../../../../index');
 
 module.exports = class UserController extends ApplicationController {
   constructor() {
     super({
       prefix: '/user',
       routes: {
-        create: {
-          method: RequestMethod.POST,
-          path: '/',
-        },
-        getOne: {
-          method: RequestMethod.GET,
-          path: '/:id',
-        },
-        update: {
-          method: RequestMethod.PATCH,
-          path: '/:id',
-        },
-        delete: {
-          method: RequestMethod.DELETE,
-          path: '/:id',
-        },
+        create: { method: POST, path: '/' },
+        getOne: { method: GET, path: '/:id' },
+        update: { method: PATCH, path: '/:id' },
+        delete: { method: DELETE, path: '/:id' },
       },
     });
     this._name = 'user';
