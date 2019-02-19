@@ -10,6 +10,7 @@ module.exports = class AppController extends ApplicationController {
         AuthController,
         UserController,
       ],
+      validators: [() => {}, () => {}],
     });
     this._name = 'root';
   }
