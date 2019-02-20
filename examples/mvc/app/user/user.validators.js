@@ -9,7 +9,10 @@ const userCreateValidator = async (ctx) => {
   } catch (error) {
     console.error('error :: ', error);
   }
-  throw new BadRequestException('no email');
+  throw new BadRequestException({
+    message: 'no email',
+    isBadRequestException: true,
+  });
 };
 
 module.exports.userCreateValidator = userCreateValidator;

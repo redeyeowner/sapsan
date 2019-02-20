@@ -12,6 +12,8 @@ const {
   },
 } = require('../../../../index');
 const { userCreateValidator } = require('./user.validators');
+const badUserDataExceptionFilter =
+  require('../exception-filters/bad-user-data.exception-filter');
 
 module.exports = class UserController extends ApplicationController {
   constructor() {
@@ -24,6 +26,7 @@ module.exports = class UserController extends ApplicationController {
         delete: { method: DELETE, path: '/:id' },
       },
       validators: [userCreateValidator],
+      exceptionFilters: [badUserDataExceptionFilter],
     });
     this._name = 'user';
   }
