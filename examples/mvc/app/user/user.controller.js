@@ -6,8 +6,12 @@ const {
     PATCH,
     DELETE,
   },
-  Exceptions: { BadRequestException },
+  Exceptions: {
+    BadRequestException,
+    InternalServerErrorException,
+  },
 } = require('../../../../index');
+const { userCreateValidator } = require('./user.validators');
 
 module.exports = class UserController extends ApplicationController {
   constructor() {
@@ -19,15 +23,22 @@ module.exports = class UserController extends ApplicationController {
         update: { method: PATCH, path: '/:id' },
         delete: { method: DELETE, path: '/:id' },
       },
+      validators: [userCreateValidator],
     });
     this._name = 'user';
   }
 
-  create() {
-    return {
-      method: 'create',
-      name: this._name,
-    };
+  async create(ctx) {
+    try {
+      const body = await ctx.getBody();
+      return {
+        method: 'create',
+        name: this._name,
+        body,
+      };
+    } catch (error) {
+      throw new InternalServerErrorException(error);
+    }
   }
 
   getOne() {
