@@ -3,7 +3,10 @@
  * Copyright(c) 2019 Oleh Mushka
  * MIT Licensed
  */
+const Sapsan = require('./lib/core');
+const common = require('./lib/common');
 
-module.exports = require('./lib/core');
-module.exports.core = require('./lib/core');
-module.exports.common = require('./lib/common');
+module.exports = {
+  Sapsan,
+  ...common,
+};

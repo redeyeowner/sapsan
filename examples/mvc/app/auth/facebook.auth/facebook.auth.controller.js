@@ -1,23 +1,15 @@
 const {
-  RequestMethod,
-} = require('../../../../../lib/common');
-const ApplicationController =
-  require('../../../../../lib/common/injectors/application.controller');
-
+  ApplicationController,
+  RequestMethod: { POST },
+} = require('../../../../../index');
 
 module.exports = class FacebookAuthController extends ApplicationController {
   constructor() {
     super({
       prefix: '/facebook',
       routes: {
-        signIn: {
-          method: RequestMethod.POST,
-          path: '/sign_in',
-        },
-        signOut: {
-          method: RequestMethod.POST,
-          path: '/sign_out',
-        },
+        signIn: { method: POST, path: '/sign_in' },
+        signOut: { method: POST, path: '/sign_out' },
       },
     });
     this._name = 'auth';

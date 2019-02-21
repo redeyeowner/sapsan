@@ -1,5 +1,4 @@
-const ApplicationController =
-  require('../../../lib/common/injectors/application.controller');
+const { ApplicationController } = require('../../../index');
 const AuthController = require('./auth/auth.controller');
 const UserController = require('./user/user.controller');
 
@@ -10,6 +9,10 @@ module.exports = class AppController extends ApplicationController {
       controllers: [
         AuthController,
         UserController,
+      ],
+      validators: [
+        () => ({ AppController1: true }),
+        () => ({ AppController2: true }),
       ],
     });
     this._name = 'root';
