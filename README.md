@@ -4,7 +4,6 @@ For now it is on the stage on development and can't be used for real projects be
 
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
-  [![CodeStyle][codestyle-image]][codestyle-url]
   [![Package License][license-image]][license-url]
 
 ## Installation
@@ -54,7 +53,5 @@ Sapsan is an MIT-licensed open source project. It can grow thanks to the sponsor
 [npm-url]: https://npmjs.org/package/sapsan
 [downloads-image]: https://img.shields.io/npm/dm/sapsan.svg
 [downloads-url]: https://npmjs.org/package/sapsan
-[codestyle-image]: https://img.shields.io/npm/dm/eslint-config-airbnb.svg
-[codestyle-url]: https://www.npmjs.com/package/eslint-config-airbnb
-[license-image]: https://img.shields.io/npm/v/sapsan.svg
+[license-image]: https://img.shields.io/npm/l/sapsan.svg
 [license-url]: https://npmjs.org/package/sapsan
