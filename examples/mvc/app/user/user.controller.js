@@ -13,6 +13,7 @@ const {
 } = require('../../../../index');
 const { userCreateValidator } = require('./user.validators');
 const { createUseSerializer } = require('./user.serializers');
+const { addToNamePrefixMiddleware } = require('./user.middlewares');
 const { createUseDeserializer } = require('./user.deserializers');
 const badUserDataExceptionFilter =
   require('../exception-filters/bad-user-data.exception-filter');
@@ -29,6 +30,7 @@ module.exports = class UserController extends ApplicationController {
       },
       validators: [userCreateValidator],
       serializers: [createUseSerializer],
+      middlewares: [addToNamePrefixMiddleware],
       deserializers: [createUseDeserializer],
       exceptionFilters: [badUserDataExceptionFilter],
     });
