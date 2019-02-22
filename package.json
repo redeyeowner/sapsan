@@ -7,7 +7,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "lint:js": "eslint lib/**/*.js"
+    "lint:js": "eslint lib/**/*.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0"
   },
   "dependencies": {
     "assert": "^1.4.1",
