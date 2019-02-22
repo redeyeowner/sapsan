@@ -12,6 +12,9 @@ const {
   },
 } = require('../../../../index');
 const { userCreateValidator } = require('./user.validators');
+const { createUseSerializer } = require('./user.serializers');
+const { addToNamePrefixMiddleware } = require('./user.middlewares');
+const { createUseDeserializer } = require('./user.deserializers');
 const badUserDataExceptionFilter =
   require('../exception-filters/bad-user-data.exception-filter');
 
@@ -26,6 +29,9 @@ module.exports = class UserController extends ApplicationController {
         delete: { method: DELETE, path: '/:id' },
       },
       validators: [userCreateValidator],
+      serializers: [createUseSerializer],
+      middlewares: [addToNamePrefixMiddleware],
+      deserializers: [createUseDeserializer],
       exceptionFilters: [badUserDataExceptionFilter],
     });
     this._name = 'user';
@@ -34,10 +40,12 @@ module.exports = class UserController extends ApplicationController {
   async create(ctx) {
     try {
       const body = await ctx.getBody();
+      const { state } = ctx;
       return {
         method: 'create',
         name: this._name,
         body,
+        state,
       };
     } catch (error) {
       throw new InternalServerErrorException(error);
