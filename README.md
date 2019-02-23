@@ -5,6 +5,7 @@ For now it is on the stage on development and can't be used for real projects be
   [![NPM Version][npm-image]][npm-url]
   [![NPM Downloads][downloads-image]][downloads-url]
   [![Package License][license-image]][license-url]
+  [![Build Status](build-status-image)](build-status)
 
 ## Installation
 
@@ -55,3 +56,5 @@ Sapsan is an MIT-licensed open source project. It can grow thanks to the sponsor
 [downloads-url]: https://npmjs.org/package/sapsan
 [license-image]: https://img.shields.io/npm/l/sapsan.svg
 [license-url]: https://npmjs.org/package/sapsan
+[build-status-image]: https://travis-ci.org/redeyeowner/sapsan.svg?branch=1.0.3
+[build-status]: https://travis-ci.org/redeyeowner/sapsan
