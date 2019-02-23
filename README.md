@@ -56,5 +56,5 @@ Sapsan is an MIT-licensed open source project. It can grow thanks to the sponsor
 [downloads-url]: https://npmjs.org/package/sapsan
 [license-image]: https://img.shields.io/npm/l/sapsan.svg
 [license-url]: https://npmjs.org/package/sapsan
-[build-status-image]: https://travis-ci.org/redeyeowner/sapsan.svg?branch=1.0.3
+[build-status-image]: https://travis-ci.org/redeyeowner/sapsan.svg?branch=test/cover-common
 [build-status]: https://travis-ci.org/redeyeowner/sapsan
