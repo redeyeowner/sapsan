@@ -7,7 +7,7 @@ const {
   isUndefined,
   isNil,
   isObject,
-} = require('../../../../lib/common/utils/boolean.util');
+} = require('../../../../lib/common/utils/type.util');
 const ConfigModule = require('../../../../lib/common/config/config.module');
 const {
   WrongConfigModule,
